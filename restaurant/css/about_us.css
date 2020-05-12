@@ -25,7 +25,7 @@ body
 
 .nav-item a
 {	
-	color: white;
+	color: white !important;
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -445,6 +445,26 @@ form label
 /* close pop up ends */
 
 /* pop up styling ends */
+
+
+
+/* reserve */
+
+.reserve button
+{
+	display: block;
+}
+
+#date
+{
+	width: 100%;
+	display:block;
+	padding: 5px 0 5px;
+	border-radius: 6px;
+}
+
+/* reserve ends */
+
 
 
 /* icon bar*/

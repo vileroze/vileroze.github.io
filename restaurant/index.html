@@ -20,6 +20,8 @@
     <script src="https://kit.fontawesome.com/ba216c9371.js" crossorigin="anonymous"></script>
     <!-- additonal links -->
 
+    <script type="text/javascript" src="js/script.js"></script> 
+
     <title>ASSESSMENT</title>
   </head>
   <body>
@@ -48,6 +50,9 @@
 						<li class="nav-item">
 						  <a class="nav-link" href="about_us.html">about us</a>
 						</li>
+						<li class="nav-item">
+						  <a onclick="reserve()" class="nav-link" style="cursor: pointer;">reserve a table</a>
+						</li>
 					</ul>
 				</div>
 				<!-- navbar links -->
@@ -67,6 +72,71 @@
 			</div>
 		</section>
 		<!-- main title -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- reserve-->
+  	<div class="pop-up reserve">
+		<div class="close" onclick="close_pop_up()" >+</div>
+		<div class="pop-up-content">
+			<div class="pop-up-header">
+				<img class="left-line" src="images/left-line.png">
+				<h1>NEWSLETTER</h1>
+				<img class="right-line" src="images/right-line.png" style="transform: scaleX(-1);">
+			</div>
+			<form>
+				<label for="first-name">First name</label>
+				<input type="text" placeholder="Your name..." class="form-control" id="first-name" aria-describedby="firtname">
+
+				<label for="number-of-people">Number of people</label>
+				<input type="number" placeholder="number of people..." class="form-control" id="last-name" aria-describedby="number-of-people">
+
+			    <label for="reserve-date">Date:</label>
+  				<input type="date" id="date" name="date">
+
+			    <button type="submit" class="btn">Submit</button>
+			</form>
+		</div>
+	</div>
+	<!-- reserve -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<!-- social media -->
 		<div class="icon-bar">

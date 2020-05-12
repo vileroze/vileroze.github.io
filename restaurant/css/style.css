@@ -73,7 +73,7 @@ body
 /* navbar links */
 .nav-item a
 {
-	color: white;
+	color: white !important;
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -201,6 +201,185 @@ body
 /* Media icons end */
 /* icon bar links end */
 /* header end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* reserve */
+.pop-up
+{
+	width: 100%;
+	height:100%;
+	background-color: rgba(83,79,79,0.79);
+	position: fixed;
+	top: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1045;
+	display: none;
+}
+
+.pop-up-content
+{
+	top: 80px;
+	justify-content: center;
+	font-size: 1rem;
+	color: white;
+	padding: 1rem 1rem 0rem;
+    width: 800px;
+    border-style: solid;
+    border-width: 32px;
+	border-image: url(https://images.getbento.com/accounts/3c70edea0d4db26c685d5c471e7ecf53/media/images/76609Emailsignupborder-white.png)200 repeat;
+}
+
+.pop-up-content .btn
+{
+	margin: 30px auto;
+	background-color: white;
+	color: black;
+}
+
+.pop-up-content .btn:hover
+{
+	background-color: #dd0031;
+}
+
+.pop-up-header
+{
+	justify-content: center;
+	text-align: center;
+	display: flex;
+}
+
+
+.pop-up-header img
+{
+	padding: 0;
+	height: 60px;
+	width: 180px;
+}
+
+
+@media only screen and (max-width: 789px)
+{
+	.pop-up-header
+	{
+		display: block;
+	}
+
+	.pop-up-content
+	{
+		max-width: 350px;
+	}
+
+	.pop-up-content .btn
+	{
+		margin-left: 70px;
+	}
+}
+
+form button
+{
+	margin-top: 15px;
+	margin-left: 250px;
+}
+
+form label
+{
+	padding-top: 15px;
+}
+
+.custom-control
+{
+	font-size: 0.9rem;
+	margin-top: 10px;
+}
+
+.pop-up button:hover
+{
+	color: white !important;
+}
+
+
+/* close pop up */
+.close
+{
+	font-size: 50px;
+	transform: rotate(45deg);
+	color: white;
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.close:hover
+{
+	color: #dd0031;
+}
+/* close pop up ends */
+
+/* reserve */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */

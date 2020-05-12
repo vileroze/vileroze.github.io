@@ -26,7 +26,7 @@ body
 
 .nav-item a
 {	
-	color: white;
+	color: white !important;
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -188,7 +188,8 @@ body
 .icon-bar a:hover {
   background-color: white;
   transform: scale(1.2);
-  color: pink;
+  color: #dd0031;
+  z-index: 2;
 }
 
 .facebook 
@@ -328,6 +329,22 @@ form label
 	color: #dd0031;
 }
 /* close pop up ends */
+/* reserve */
+
+.reserve button
+{
+	display: block;
+}
+
+#date
+{
+	width: 100%;
+	display:block;
+	padding: 5px 0 5px;
+	border-radius: 6px;
+}
+
+/* reserve ends */
 
 
 /* main-content */
