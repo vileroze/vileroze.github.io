@@ -1,0 +1,611 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+a{ text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+li{ list-style: none; }
+
+body
+{
+	overflow-x: hidden;
+}
+
+/* navigation  a5a5a561 */
+.bg{
+	transition: 0.5 ease;
+	background-color: transparent !important;
+}
+
+.bg.scrolled
+{
+	background-color: #a5a5a561 !important;
+}
+
+
+.nav-item a
+{	
+	color: white;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-left: 30px;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.nav-item a:hover
+{
+	box-shadow: inset 0 0 0 25px #dd0031;
+}	
+
+.navbar-toggler
+{
+	background: #dd0031;
+}
+/* navigation ends */
+
+/* slider */
+.carousel
+{
+	margin:auto auto;
+}
+
+.carousel-item img
+{
+	object-fit: cover;
+	min-height: 600px;
+    max-height: 600px;
+}
+
+/* slider images */
+.container a img
+{
+	transition-duration: 0.5s;
+}
+
+.container a img:hover
+{
+	transform: scale(1.2);
+}
+/* slider images end */
+
+/* slider buttons */
+.btn
+{
+	color: #dd0031 !important;
+	background-color: white ;
+	font-size: 20px !important;
+	border: 1px solid white;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding:12px 35px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	text-align: center;
+}
+
+.btn a
+{
+	color: #dd0031;
+}
+
+.btn a:hover
+{
+	color: white;
+}
+
+.btn:hover
+{
+	border: none;
+	background: #dd0031 !important;
+	box-shadow:0px 0 40px 0 #6b2d00 !important;
+}
+/* slider button ends */
+
+
+.history
+{
+	padding-top:100px;
+	padding-bottom:50px;
+	text-align: center;
+	color: white;
+	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/history-bg.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* history */
+.history h1
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 500%;
+}
+
+.history p
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.3rem;
+}
+
+/* charity works */
+
+.community-header
+{
+	justify-content: center;
+	text-align: center;
+	display: flex;
+}
+
+.community-header img
+{
+	width: 200px;
+	margin: 0 20px 0;
+}
+
+@media only screen and (max-width: 768px)
+{
+	.community-header
+	{
+		display: block;
+	}
+}
+
+
+.charity-work
+{
+	margin-top: 80px;
+}
+
+
+.charity-work h1
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 500%;
+}
+
+.charity-work p
+{
+	padding-top: 30px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.charity-work img
+{
+	height: 70px;
+	width: 200px;
+}
+/* charity works ends */
+
+/* charity partners*/
+.charity-partners
+{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.charity-partners img
+{
+	margin-top: 20px;
+	height: 130px;
+	width: 200px;
+}
+/* charity partners ends*/
+/* history ends */
+
+
+
+/* meet the chesfs */
+.meet-the-chefs
+{
+	padding-top:70px;
+	padding-bottom: 40px;
+	text-align: center;
+	color: white;
+	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/chefs.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.chefs-content .container
+{
+	margin-top: 100px;
+}
+
+.chefs-content .container img
+{
+	width: 500px;
+	height: auto;
+}
+
+.chefs-content .container img:hover
+{
+	box-shadow: 5px 10px 18px #dd0031;
+}
+
+@media only screen and (max-width: 576px)
+{
+	.chefs-content .container img
+	{
+		max-width: 250px;
+		height: auto;
+	}
+}
+
+.chefs-content .container p
+{
+	padding-top: 100px;
+	text-align: justify;
+}
+
+.chefs-content .container .quote
+{
+	padding-top: 20px;
+	font-size: 20px;
+	font-family: 'Catamaran', sans-serif;
+}
+
+.chefs-content .container .row
+{
+	margin: 80px 0 40px;
+}
+/* meet the chefs */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* gallery */
+.gallery
+{
+	padding-top:70px;
+	padding-bottom: 40px;
+	text-align: center;
+	color: white;
+	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../images/asian-chefs.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.gallery h1
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 500%;	
+}
+
+.gallery .container img
+{
+	max-width: 450px;
+	padding-top: 30px;
+	transition: transform 0.2s;
+}
+
+.gallery .container img:hover
+{
+	box-shadow: 5px 10px 18px #dd0031;
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+@media only screen and (max-width: 476px)
+{
+	.gallery .container img
+	{
+		max-width: 250px;
+		height: auto;
+	}
+}
+/* gallery ends */
+
+
+
+/* pop up styling */
+.pop-up
+{
+	width: 100%;
+	height:100%;
+	background-color: rgba(83,79,79,0.79);
+	position: fixed;
+	top: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1045;
+	display: none;
+}
+
+.pop-up-content
+{
+	top: 80px;
+	justify-content: center;
+	font-size: 1rem;
+	color: white;
+	padding: 1rem 1rem 0rem;
+    width: 800px;
+    border-style: solid;
+    border-width: 32px;
+	border-image: url(https://images.getbento.com/accounts/3c70edea0d4db26c685d5c471e7ecf53/media/images/76609Emailsignupborder-white.png)200 repeat;
+}
+
+.pop-up-content .btn
+{
+	margin: 30px auto;
+	background-color: white;
+	color: black;
+}
+
+.pop-up-content .btn:hover
+{
+	background-color: #dd0031;
+}
+
+.pop-up-header
+{
+	justify-content: center;
+	text-align: center;
+	display: flex;
+}
+
+
+.pop-up-header img
+{
+	padding: 0;
+	height: 60px;
+	width: 180px;
+}
+
+
+@media only screen and (max-width: 789px)
+{
+	.pop-up-header
+	{
+		display: block;
+	}
+
+	.pop-up-content
+	{
+		max-width: 350px;
+	}
+
+	.pop-up-content .btn
+	{
+		margin-left: 70px;
+	}
+}
+
+form button
+{
+	margin-top: 15px;
+	margin-left: 250px;
+}
+
+form label
+{
+	padding-top: 15px;
+}
+
+.custom-control
+{
+	font-size: 0.9rem;
+	margin-top: 10px;
+}
+
+.pop-up button:hover
+{
+	color: white !important;
+}
+
+
+/* close pop up */
+.close
+{
+	font-size: 50px;
+	transform: rotate(45deg);
+	color: white;
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.close:hover
+{
+	color: #dd0031;
+}
+/* close pop up ends */
+
+/* pop up styling ends */
+
+
+/* icon bar*/
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 13px;
+}
+
+/* Media icons */
+.icon-bar a:hover {
+  background-color: white;
+  transform: scale(1.2);
+  color: #dd0031;
+}
+
+.facebook 
+{
+ 
+  color: white;
+}
+
+.twitter 
+{
+  color: white;
+}
+
+.google 
+{
+ 
+  color: white;
+}
+
+.linkedin 
+{
+
+  color: white;
+}
+
+.youtube 
+{
+	color: white;
+}
+/* Media icons ends */
+
+
+/* back to top */
+.back-to-top
+{
+	position: fixed;
+	bottom: 50px;
+	right: 10px;
+	border: 2px solid white;
+	background-color: white;
+	font-size: 18px;
+}
+/* back to top ends */
+
+
+/* partners */
+.partners 
+{
+	background-image:  linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url("../images/footer-image.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.partners .footer-line
+{
+	text-align: center;
+}
+
+.partners .footer-line img
+{
+	width: 40%;
+}
+
+.partners .logo
+{
+	padding-bottom: 2.8rem;
+	margin-top: 90px;
+	text-align: center;
+}
+
+.partners .logo img
+{
+	width: 100px;
+	height: auto;
+}
+
+.partners .logo img:hover
+{
+	transform: scale(1.2);
+}
+
+/* partners ends */
+
+
+/* footer */
+footer
+{
+	height:2.2rem;
+	width: auto;
+	color: black;
+	background: rgba(255,255,255,.2);
+	font-family: "Open Sans", sans-serif;
+}
+
+footer a
+{
+	cursor: pointer;
+}
+
+footer p
+{
+	font-family: 'Raleway', sans-serif;
+}
+
+footer .left-content
+{
+
+	margin-top: 2px;
+	margin-bottom: 2px;
+ 	padding: 2px 15px 2px;
+	border:2px solid black;
+	margin-left: 40px;
+	float: left;
+	border-radius: 25px;
+	border-width: 1px;
+	transition-property: ease-in-out;
+}
+
+.left-content:hover
+{
+	transform: scale(1.5);
+	background-color: #dd0031;
+}
+
+footer .right-content
+{
+	padding-top: 5px;
+	margin-right: 40px;
+	float: right;
+}
+
+footer span
+{
+	margin-right: 20px;
+}
+/* footer ends */
