@@ -302,6 +302,14 @@ form label
 	padding-top: 15px;
 }
 
+#date
+{
+	width: 100%;
+	display:block;
+	padding: 5px 0 5px;
+	border-radius: 6px;
+}
+
 .custom-control
 {
 	font-size: 0.9rem;

@@ -344,6 +344,11 @@ form label
 	border-radius: 6px;
 }
 
+form button:hover
+{
+	color: white !important;
+}
+
 /* reserve ends */
 
 
