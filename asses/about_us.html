@@ -302,17 +302,17 @@
 				<h1>RESERVATION</h1>
 				<img class="right-line" src="images/right-line.png" style="transform: scaleX(-1);">
 			</div>
-			<form>
+			<form id="form"  onsubmit="return validate()" action="about_us.html">
 				<label for="first-name">First name</label>
-				<input type="text" placeholder="Your name..." class="form-control" id="first-name" aria-describedby="firtname">
+				<input type="text" placeholder="Your name..." class="form-control" id="reserve_name"aria-describedby="name">
 
 				<label for="number-of-people">Number of people</label>
-				<input type="number" placeholder="number of people..." class="form-control" id="last-name" aria-describedby="number-of-people">
+				<input type="number" placeholder="number of people..." class="form-control" id="reserve_people" aria-describedby="number-of-people">
 
 			    <label for="reserve-date" id="date">Date:</label>
-  				<input type="date" id="date" name="date">
+  				<input type="date" id="reserve_date" name="date" required>
 
-			    <button type="submit" class="btn">Submit</button>
+			    <button type="submit" class="btn" >Submit</button>
 			</form>
 		</div>
 	</div>
