@@ -1,0 +1,16 @@
+.left-content
+{
+	width: 45%;
+	float: left;
+
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+
+.right-content
+{
+	width: 50%;
+	float: right;
+	box-sizing: border-box;
+	border:2px solid blue;
+}
