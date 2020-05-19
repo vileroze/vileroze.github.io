@@ -58,5 +58,33 @@ function validate()
 }
 
 
+/*subscription form validation */
+function validateSub()
+{
+	var firstName = document.getElementById("first_name");
+	var lastName = document.getElementById("last_name");
+	var email = document.getElementById("mail");
+
+	if (firstName.value == "" || firstName.value == null) {
+		alert("first name field cannot be blank");
+		return false;
+	}
+
+	else if (lastName.value == "" || lastName.value == null) {
+		alert("last name field cannot be blank");
+		return false;
+	}
+
+	else if (email.value == "" || email.value == null) {
+		alert("email cannot be blank");
+		return false;
+	}
+
+	else
+	{
+		alert("YOUR RESERVATION HAS BEEN BOOKED !!!");
+		true;
+	}
+}
 
 
