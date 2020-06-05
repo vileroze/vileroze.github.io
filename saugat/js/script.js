@@ -1,5 +1,4 @@
 
-
 /* open subscribe page */
 function subscribe()
 {

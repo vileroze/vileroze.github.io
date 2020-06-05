@@ -159,9 +159,10 @@ body
 	position: fixed;
 	bottom: 50px;
 	right: 10px;
-	border: 2px solid white;
-	background-color: lightgreen;
 	font-size: 18px;
+	color: black;
+	cursor: pointer;
+	background-color: transparent;
 }
 /* back to top ends */
 
