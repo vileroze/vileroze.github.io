@@ -86,18 +86,9 @@ body
 	text-align: center;
 }
 
-.btn a
-{
-	color: #dd0031;
-}
-
-.btn a:hover
-{
-	color: white;
-}
-
 .btn:hover
 {
+	color: white !important;
 	border: none;
 	background: #dd0031 !important;
 	box-shadow:0px 0 40px 0 #6b2d00 !important;
