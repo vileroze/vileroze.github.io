@@ -112,16 +112,16 @@
         <div class="close" onclick="close_reserve()" >+</div>
         <div class="pop-up-content">
             <div class="pop-up-header">
-                <img class="left-line" src="images/left-line.png">
+                <img class="left-line" src="images/left-line.png" alt="left">
                 <h1>RESERVATION</h1>
-                <img class="right-line" src="images/right-line.png" style="transform: scaleX(-1);">
+                <img class="right-line" src="images/right-line.png" alt="right" style="transform: scaleX(-1);">
             </div>
-            <form id="form"  onsubmit="return validate()" action="menu.html">
-                <label for="first-name">First name</label>
-                <input type="text" placeholder="Your name..." class="form-control" id="reserve_name"aria-describedby="name">
+            <form id="form"  onsubmit="return validate()" action="about_us.html">
+                <label for="reserve_name_r">First name</label>
+                <input type="text" placeholder="Your name..." class="form-control" id="reserve_name_r" aria-describedby="reserve_name_r">
 
-                <label for="number-of-people">Number of people</label>
-                <input type="number" placeholder="number of people..." class="form-control" id="reserve_people" aria-describedby="number-of-people">
+                <label for="reserve_people_r">Number of people</label>
+                <input type="number" placeholder="number of people..." class="form-control" id="reserve_people_r" aria-describedby="reserve_people_r">
 
                 <label for="reserve-date" id="date">Date:</label>
                 <input type="date" id="reserve_date" name="date" required>
@@ -131,22 +131,6 @@
         </div>
     </div>
     <!-- reserve -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

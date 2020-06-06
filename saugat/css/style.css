@@ -60,8 +60,6 @@ body
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
 }
 
 .center-div p
@@ -157,8 +155,6 @@ body
 .icon-bar {
   position: fixed;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 

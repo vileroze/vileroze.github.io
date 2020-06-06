@@ -29,8 +29,8 @@ function close_reserve()
 /*reserve form validation */
 function validate()
 {
-	var name = document.getElementById("reserve_name");
-	var people = document.getElementById("reserve_people");
+	var name = document.getElementById("reserve_name_r");
+	var people = document.getElementById("reserve_people_r");
 	var date = document.getElementById("reserve_date");
 	var now = new Date();
 
