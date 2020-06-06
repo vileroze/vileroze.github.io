@@ -1,0 +1,42 @@
+form
+{
+    margin:auto auto;
+    width:400px;
+    padding:1em;
+}
+
+ul
+{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+ul li
+{
+    margin-top:1em;
+}
+
+label
+{
+    display:inline;
+}
+
+input
+{
+    display: inline;
+    width: 300px;
+}
+
+textarea
+{
+    vertical-align: top;
+}
+
+button
+{
+    border-radius: 24px;
+    padding: 10px 15px 10px;
+    margin-left:94px;
+    margin-top:1em;
+}
