@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/ba216c9371.js" crossorigin="anonymous"></script>
     <!-- additonal links -->
 
-    <script type="text/javascript" src="js/script.js"></script> 
+    <script src="js/script.js"></script> 
 
 
 
@@ -69,9 +69,9 @@
     <!-- slider -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="community-header text-center" >
-            <img class="left-line" src="images/left-line.png">
+            <img class="left-line" src="images/left-line.png" alt="left">
             <h1>Menu</h1>
-            <img class="right-line" src="images/right-line.png" style="transform: scaleX(-1);">
+            <img class="right-line" src="images/right-line.png" alt="right" style="transform: scaleX(-1);">
         </div>    
         <div class="color-overlay"></div>
       <ol class="carousel-indicators">
@@ -136,19 +136,19 @@
         <div class="close" onclick="close_pop_up()" >+</div>
         <div class="pop-up-content">
             <div class="pop-up-header">
-                <img class="left-line" src="images/left-line.png">
+                <img class="left-line" src="images/left-line.png" alt="left">
                 <h1>NEWSLETTER</h1>
-                <img class="right-line" src="images/right-line.png" style="transform: scaleX(-1);">
+                <img class="right-line" src="images/right-line.png" alt="right" style="transform: scaleX(-1);">
             </div>
-            <form id="form"  onsubmit="return validateSub()" action="about_us.html">
-                <label for="first-name">First name</label>
-                <input type="text" class="form-control" id="first_name" aria-describedby="firtname">
+            <form id="form-2"  onsubmit="return validateSub()" action="about_us.html">
+                <label for="first_name">First name</label>
+                <input type="text" class="form-control" id="first_name" aria-describedby="first_name">
 
-                <label for="last-name">Last name</label>
-                <input type="text" class="form-control" id="last_name" aria-describedby="lastname">
+                <label for="last_name">Last name</label>
+                <input type="text" class="form-control" id="last_name" aria-describedby="last_name">
 
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="mail" aria-describedby="emailHelp">
+                <label for="mail">Email address</label>
+                <input type="email" class="form-control" id="mail" aria-describedby="mail">
                 <small id="emailHelp" class="form-text text-muted" style="color: white !important;">We'll never share your email with anyone else.</small>
 
                 <div class="custom-control custom-checkbox">
@@ -178,7 +178,7 @@
                 <label for="reserve_people_r">Number of people</label>
                 <input type="number" placeholder="number of people..." class="form-control" id="reserve_people_r" aria-describedby="reserve_people_r">
 
-                <label for="reserve-date" id="date">Date:</label>
+                <label for="reserve_date" id="date">Date:</label>
                 <input type="date" id="reserve_date" name="date" required>
 
                 <button type="submit" class="btn" >Submit</button>
@@ -196,12 +196,12 @@
             </button>
         </h2>
 
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div id="collapseOne" class="collapse show" aria-labelledby="collapseOne" data-parent="#accordionExample">
             <div class="menu-container">
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2> SUCCO FRESCO</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -221,7 +221,7 @@
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2> PASTICCINI</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">Olive Oil Muffin | 5.5</li>
@@ -240,7 +240,7 @@
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>UOVA</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -275,12 +275,12 @@
             </button>
         </h2>
 
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div id="collapseTwo" class="collapse" aria-labelledby="collapseTwo" data-parent="#accordionExample">
             <div class="menu-container">
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>SALUMI</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -314,7 +314,7 @@
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>ANTIPASTI</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -347,7 +347,7 @@
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>CONTORNI</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -381,12 +381,12 @@
         </h2>
 
  
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div id="collapseThree" class="collapse" aria-labelledby="collapseThree" data-parent="#accordionExample">
             <div class="menu-container">
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>APERITIVI</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -411,7 +411,7 @@
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>COCKTAILS</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -436,7 +436,7 @@
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>NON-ALCOHOLIC COCKTAILS</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -453,7 +453,7 @@
                 <section class="menu-section">
                     <div class="menu-header">
                         <h2>BEER</h2>
-                        <img class="menu-header-img" src="images/menu-header-img.png">
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
                     </div>
                     <ul>
                         <li class="menu-item">
@@ -478,7 +478,7 @@
 
     <!-- back to top -->
     <div class="back-to-top">
-        <span><a href="#carouselExampleIndicators"><i class="fa fa-arrow-up" alt="back to top"></i></a></span>
+        <span><a href="#carouselExampleIndicators"><i class="fa fa-arrow-up"></i></a></span>
     </div>
     <!-- back to top -->
 
@@ -486,10 +486,10 @@
     <!-- partners -->
     <div class="partners text-center">
         <div class="footer-line">
-            <img src="images/menu-footer-line.png">
+            <img src="images/menu-footer-line.png" alt="footer-line">
         </div>
         <div class="logo">
-            <a href="https://www.ushgnyc.com/" target="_blank"><img src="images/USHG_logo.png"></a>
+            <a href="https://www.ushgnyc.com/" target="_blank"><img src="images/USHG_logo.png" alt="USHG"></a>
         </div>
     </div>
     <!-- partners -->
