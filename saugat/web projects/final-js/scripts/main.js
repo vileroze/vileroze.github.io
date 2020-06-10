@@ -15,22 +15,22 @@ function scrollFunction(){
 
 
 /* toggler*/
-const btn = document.querySelector("button");
-const heading = document.querySelector("h1");
+const btn2 = document.querySelector("#nightMode");
+var heading = document.querySelectorAll("h1");
 const body = document.querySelector("body");
-btn.onclick = function()
+btn2.onclick = function()
 {
-    const btnClass = btn.getAttribute('class');
-    if ( btnClass === 'nightMode'){
-        btn.setAttribute('class', 'dayMode');
-        btn.textContent = 'day mode';
+    const btnClass = btn2.getAttribute('class');
+    if ( btnClass === 'night'){
+        btn2.setAttribute('class', 'day');
+        btn2.textContent = 'day mode';
         body.style.backgroundColor = "black";
-        heading.style.color = "yellow";
+        body.style.color = "yellow";
     }
     else{
-        btn.setAttribute('class', 'nightMode');
-        btn.textContent = 'night mode';
+        btn2.setAttribute('class', 'night');
+        btn2.textContent = 'night mode';
         body.style.backgroundColor = "white";
-        heading.style.color = "red";
+        body.style.color = "red";
     }
 }
