@@ -80,85 +80,17 @@ footer
     margin-bottom: 10px;
 }
 
-.middle
+
+.middle button
 {
     position: absolute;
-    top: 20%;
-    left: 12%;
-    transform: translate(-50%, -50%);
+    top: 30px;
+    left: 5px;
+    margin-right: 30px;
+    padding : 8px 12px 8px;
+    border-radius: 20px;
 }
-
-.toggler
-{
-    width: 300px;
-    overflow: hidden;
-}
-
-.item
-{
-    overflow: hidden;
-}
-
-.btn
-{
-    display: block;
-    padding:16px 20px;
-    color:black;
-    position: relative;
-    border: 2px solid black;
-}
-
-.btn:before
-{
-    content:"";
-    position: absolute;
-    width:14px;
-    height:14px;
-    left:20px;
-    bottom: -7px;
-    transform: rotate(45deg);
-}
-
-.options
-{
-   overflow: hidden; 
-   transition: max-height 0.3s;
-   max-height: 0;
-}
-
-.options a
-{
-    display: block;
-    color: black;
-    padding:16px 26px;
-    font-size: 14px;
-    margin: 4px 0;
-    position: relative;
-}
-
-.options a:before
-{
-    content: "";
-    position:absolute;
-    height: 100%;
-    background: #3498db;
-    left:0;
-    top:0;
-    transition: 0.3s;
-    opacity:0;
-}
-
-.options a:hover:before
-{
-    opacity: 1;
-}
-
-.item:hover .options
-{
-    max-height: 10em;
-}
-
-#topBtn
+#top
 {
     position:fixed;
     bottom: 40px;
