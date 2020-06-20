@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <!--CSS -->
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jost&display=swap" rel="stylesheet">
+    <!--fonts-->
+
+    <!-- additonal links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/ba216c9371.js" crossorigin="anonymous"></script>
+    <!-- additonal links -->
+
+    <script src="js/script.js"></script> 
+
+
+
+    <title>ASSESSMENT</title>
+  </head>
+ <body>
+    <!-- header -->
+    <div class="header" id="top-header">
+        <nav class="navbar navbar-expand-lg bg fixed-top">
+            <div class="container text-uppercase">
+                <a class="navbar-brand animated infinite pulse" href="index.html"><img src="images/chick.svg" width="75" height="75" alt="brand"> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fas fa-ellipsis-h"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto animated bounceInRight delay-1s">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="event.html">Event</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="about_us.html">about us</a>
+                        </li>
+                        <li class="nav-item">
+                          <a onclick="reserve()" class="nav-link" style="cursor: pointer;">reserve a table</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- header -->
+
+    <!-- slider -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="community-header text-center" >
+            <img class="left-line" src="images/left-line.png" alt="left">
+            <h1>Menu</h1>
+            <img class="right-line" src="images/right-line.png" alt="right" style="transform: scaleX(-1);">
+        </div>    
+        <div class="color-overlay"></div>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+           <div class="color-overlay"></div>
+           <img src="images/menu-food-1.jpg"  class="d-block w-100 first" alt="chimken treatos">
+        </div>
+        <div class="carousel-item">
+            <div class="color-overlay"></div>
+           <img src="images/menu-food-2.jpg" class="d-block w-100 second" alt="bar">
+        </div>
+        <div class="carousel-item">
+            <div class="color-overlay"></div>
+           <img src="images/menu-food-3.jpg" class="d-block w-100 third" alt="cocktail">
+        </div>
+        <div class="carousel-item">
+            <div class="color-overlay"></div>
+           <img src="images/menu-food-4.jpg" class="d-block w-100 third" alt="cocktail">
+        </div>
+        <div class="carousel-item">
+            <div class="color-overlay"></div>
+           <img src="images/menu-food-5.jpg" class="d-block w-100 third" alt="cocktail">
+        </div>
+        <div class="carousel-item">
+            <div class="color-overlay"></div>
+           <img src="images/menu-food-6.jpg" class="d-block w-100 third" alt="cocktail">
+        </div>
+        <div class="carousel-item">
+            <div class="color-overlay"></div>
+           <img src="images/menu-food-7.jpg" class="d-block w-100 third" alt="cocktail">
+        </div>
+        <div class="carousel-item">
+            <div class="color-overlay"></div>
+           <img src="images/menu-food-8.jpg" class="d-block w-100 third" alt="cocktail">
+        </div>
+      </div>
+    </div>
+    <!-- slider ends-->
+
+    <!-- social media -->
+    <div class="icon-bar">
+        <a href="https://facebook.com" class="facebook"><i class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://google.com" class="google"><i class="fa fa-google"></i></a>
+        <a href="https://linkedin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://youtube.com" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+    <!-- social media -->
+
+    <!-- pop up -->
+    <div class="pop-up">
+        <div class="close" onclick="close_pop_up()" >+</div>
+        <div class="pop-up-content">
+            <div class="pop-up-header">
+                <img class="left-line" src="images/left-line.png" alt="left">
+                <h1>NEWSLETTER</h1>
+                <img class="right-line" src="images/right-line.png" alt="right" style="transform: scaleX(-1);">
+            </div>
+            <form id="form-2"  onsubmit="return validateSub()" action="about_us.html">
+                <label for="first_name">First name</label>
+                <input type="text" class="form-control" id="first_name" aria-describedby="first_name">
+
+                <label for="last_name">Last name</label>
+                <input type="text" class="form-control" id="last_name" aria-describedby="last_name">
+
+                <label for="mail">Email address</label>
+                <input type="email" class="form-control" id="mail" aria-describedby="mail">
+                <small id="emailHelp" class="form-text text-muted" style="color: white !important;">We'll never share your email with anyone else.</small>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="checkbox" id="customCheck1" value="check" required>
+                  <label class="custom-control-label" for="customCheck1" style="padding-top: 0px;">Agree to recieve emails about updates</label>
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- pop up -->
+
+    <!-- reserve-->
+    <div class="pop-up reserve">
+        <div class="close" onclick="close_reserve()" >+</div>
+        <div class="pop-up-content">
+            <div class="pop-up-header">
+                <img class="left-line" src="images/left-line.png" alt="left">
+                <h1>RESERVATION</h1>
+                <img class="right-line" src="images/right-line.png" alt="right" style="transform: scaleX(-1);">
+            </div>
+            <form id="form"  onsubmit="return validate()" action="about_us.html">
+                <label for="reserve_name_r">First name</label>
+                <input type="text" placeholder="Your name..." class="form-control" id="reserve_name_r" aria-describedby="reserve_name_r">
+
+                <label for="reserve_people_r">Number of people</label>
+                <input type="number" placeholder="number of people..." class="form-control" id="reserve_people_r" aria-describedby="reserve_people_r">
+
+                <label for="reserve_date" id="date">Date:</label>
+                <input type="date" id="reserve_date" name="date" required>
+
+                <button type="submit" class="btn" >Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- reserve -->
+
+
+    <!--menu content -->
+    <div class="accordion" id="accordionExample">
+        <h2>
+            <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                BREAKFAST
+            </button>
+        </h2>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="collapseOne" data-parent="#accordionExample">
+            <div class="menu-container">
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2> SUCCO FRESCO</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading" style="margin-bottom: 10px;">Orange & Grapefruit | 7 | 10</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Verde | 10</p>
+                            <p>Apple, Fennel, Kale & Parsley</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Carote | 10</p>
+                            <p>Carrot, Apple & Ginger</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2> PASTICCINI</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">Olive Oil Muffin | 5.5</li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Chocolate Croissant | 6.5</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Toffee Glazed Brioche Bun | 6.5</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Glazed Cinnamon Roll | 6.5</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>UOVA</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Contadino | 22</p>
+                            <p>Two Poached Eggs, Roasted Cauliflower & Butternut Squash</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Cacio e Pepe | 19</p>
+                            <p>Soft Scrambled Eggs, Pecorino & Black Pepper</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Carbonara | 21</p>
+                            <p>Soft Scrambled Eggs, Pecorino, Black Pepper & Guanciale</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Cotechino | 21</p>
+                            <p>Fried Egg, Pork Sausage, Pecorino Biscuit & Arugula</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Funghi e Rapini Hash | 21</p>
+                            <p>Sunnyside Egg, Mushroom, Rapini & Potato</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+
+        <h2>
+            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  DINNER
+            </button>
+        </h2>
+
+        <div id="collapseTwo" class="collapse" aria-labelledby="collapseTwo" data-parent="#accordionExample">
+            <div class="menu-container">
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>SALUMI</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Finocchiona | 11</p>
+                            <p>California</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Finochietta | 12</p>
+                            <p>New Jersey</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Mortadella | 11</p>
+                            <p>New Jersey</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Prosciutto Di Parma | 17</p>
+                            <p>Parma</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Prosciutto e Mozzarella | 23</p>
+                            <p>Parma & Bufala</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Paté De Campagna | 18</p>
+                            <p>Maialino</p>
+                        </li>
+                    </ul>
+                </section>
+
+
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>ANTIPASTI</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Insalata* | 18</p>
+                            <p>Mixed Greens, Anchovy, Pecorino & Breadcrumb</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Burrata | 18</p>
+                            <p>Anchovies & Pizza Bianca</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Polpo | 23</p>
+                            <p>Seared Octopus, Marinated Heirloom Beans, Red Onion & Radish</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Insalata di Agrume | 19</p>
+                            <p>Citrus, Fennel, Walnut, Mint & Ricotta Salata</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Fegato | 19</p>
+                            <p>Chicken Liver, Strawberry & Toasted Filone</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Carciofini | 18</p>
+                            <p>Crispy Artichokes & Lemon</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>CONTORNI</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Funghi Trifolati | 17</p>
+                            <p>Mushroom, White Wine & Anchovy</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Carote | 12</p>
+                            <p>Carrot, Chili, Caper & Lemon</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Spinaci | 12</p>
+                            <p>Sauteed Spinach & Garlic</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Cavoletti | 12</p>
+                            <p>Brussel Sprouts & Lemon</p>
+                        </li>
+                    </ul>
+                </section>
+
+
+            </div>
+        </div>
+
+
+        <h2>
+            <button class="btn collapsed" id="beverages" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                 BEVERAGES
+            </button>
+        </h2>
+
+ 
+        <div id="collapseThree" class="collapse" aria-labelledby="collapseThree" data-parent="#accordionExample">
+            <div class="menu-container">
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>APERITIVI</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Aperol | 13</p>
+                            <p>Padua, Italy</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Campari | 14</p>
+                            <p>Milano, Italy</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Cappelletti Aperitivo | 13</p>
+                            <p>Alto Adige, Italy</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Carpano Antica Formula | 13</p>
+                            <p>Torino, Italy</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>COCKTAILS</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Victor Hugo | 18</p>
+                            <p>Gin, St. Germain, Chartreuse, Tarragon</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Martino | 18</p>
+                            <p>Rosemary & Oregano House-Infused Gin, Carpano Antica, Lime & Cucumber</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Quinto Quarto | 18</p>
+                            <p>Bourbon, Basil, Lemon, Blueberry</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Monaci sulla Spiaggia | 18</p>
+                            <p>Rum, Monk's Liqueur, Pineapple, Walnut Orgeat</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>NON-ALCOHOLIC COCKTAILS</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Ginger Beer | 10</p>
+                            <p>Ginger, Lime</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Espresso Fizz | 10</p>
+                            <p>Espresso, Tonic & Orange Bitters</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-section">
+                    <div class="menu-header">
+                        <h2>BEER</h2>
+                        <img class="menu-header-img" src="images/menu-header-img.png" alt="head-img">
+                    </div>
+                    <ul>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Peroni, Nastro Azzurro, Pale Lager | 9</p>
+                            <p>Roma</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Torrente Fragrante, Aromatic Pale Ale | 16</p>
+                            <p>Birrificio Del Ducato, Emilia Romagna</p>
+                        </li>
+                        <li class="menu-item">
+                            <p class="menu-item-heading">Other Half Double Citra Daydream Imperial Oat Cream IPA | 18</p>
+                            <p>Other Half, New York 16oz</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!--menu content ends -->
+
+
+    <!-- back to top -->
+    <div class="back-to-top">
+        <span><a href="#carouselExampleIndicators"><i class="fa fa-arrow-up"></i></a></span>
+    </div>
+    <!-- back to top -->
+
+ 
+    <!-- partners -->
+    <div class="partners text-center">
+        <div class="footer-line">
+            <img src="images/menu-footer-line.png" alt="footer-line">
+        </div>
+        <div class="logo">
+            <a href="https://www.ushgnyc.com/" target="_blank"><img src="images/USHG_logo.png" alt="USHG"></a>
+        </div>
+    </div>
+    <!-- partners -->
+    
+
+    <!-- footer -->
+    <footer class="fixed-bottom">
+        <a onclick="subscribe()" class="left-content animated flash slower infinite">subscribe</a>
+        <p class="right-content"><span><i class="fas fa-phone-alt animated infinite rubberBand"></i>    </span>        416-572-8008</p>
+    </footer>
+    <!-- footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        /* change color of navbar when scrolled */
+
+        $(window).scroll(function(){
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+
+        });
+    </script>
+  </body>
+</html>

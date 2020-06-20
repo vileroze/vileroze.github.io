@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        body
+        {
+            margin: auto auto;
+        }
+        form
+        {
+            width: 300px;
+            margin: auto auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="POST">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong><abbr title="required:">*</abbr></strong>.</p>
+        <section>
+            <p><input type="search" id = "search" name = "search" placeholder="Search"></p>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="mr">
+                            Mister
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="ms">
+                            Miss
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <div class="clr"></div>
+            <div class="co_info">
+                <p>
+                    <label for="name">Name: <strong><abbr title="required">*</abbr></strong></label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Email: <strong><abbr title="required">*</abbr></strong></label>
+                    <input type="email" id="email" name="email" required multiple>
+                </p>
+                <p>
+                    <label for="password">Password: <strong><abbr title="required">*</abbr></strong></label>
+                    <input type="password" id="password" name="password" required>
+                </p>
+                <p>
+                    <label for="phone">Phone: <strong><abbr title="required">*</abbr></strong></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </p>
+                <p>
+                    <label for="website">Website: </label>
+                    <input type="url" id="website" name="website">
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+                <label for="quantity">Quantity: <strong><abbr title="required">*</abbr></strong></label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+            </p>
+            <p>
+                <label for="price">Price: <strong><abbr title="required">*</abbr></strong></label>
+                <input type="number" id="price" name="price" min = "0" max = "1000" step = "0.1">
+            </p>
+            <p>
+                <label for="color">Product Color: </label>
+                <input type="color" id="color" name="color">
+            </p>
+            <p>
+                <label for="range">Rating: </label>
+                <input type="range" id="range" name="range" min="0" max="5" value = "3">
+                <output class = "rating-output" for = "range"></output>
+            </p>
+            <p>
+                <label for="card">Card type: </label>
+                <select id="card" name="card">
+                    <option value="v">Visa</option>
+                    <option value="m">Mastercard</option>
+                    <option value="a">debit card</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">Card Number: <strong><abbr title="required">*</abbr></strong></label>
+                <input type="tel" id="number" name="number" required>
+            </p>
+            <p>
+                <label for="date">Expiration date: <strong><abbr title="required">*</abbr></strong></label>
+                <input type="date" id="date" name="date" min = "2020/02/01" max = "2020/03/01" step = "7" required><br>
+                <label for="date"><em>formatted as mm/yy</em></label>
+            </p>
+            <p>Alternatives:</p>
+            <p><input type="datetime-local" name="datetime" id="datetime"></p>
+            <p><input type="month" name="month" id="month"></p>
+            <p><input type="time" name="time" id="time"></p>
+            <input type="week" name="week" id="week">
+        </section>
+        <p>
+            <button type="submit">Validate the payment</button>
+        </p>
+        <script>
+            const range = document.querySelector('#range')
+            const output = document.querySelector('.rating-output')
+
+            output.textContent = price.value
+
+            range.addEventListener('input', function() {
+                output.textContent = range.value
+            });
+        </script>
+    </form>
+</body>
+</html>
