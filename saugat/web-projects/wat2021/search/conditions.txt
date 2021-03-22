@@ -1,0 +1,25 @@
+if (!empty($_POST['category']) and empty($_POST['userSearch']) and empty($_POST['sort'])) {
+					$category = $_POST['category'];
+					if ($category == 'all') {
+						$query = "SELECT * FROM products";
+						// $query = "SELECT * FROM products WHERE category = 'male' OR
+						// 	category = 'female' OR category = 'gender neutral'";
+					}else $query = "SELECT * FROM products WHERE category = '$category'";
+				} elseif (empty($_POST['category']) and empty($_POST['userSearch']) and !empty($_POST['sort'])) {
+					$sort = $_POST['sort'];
+					$query = "SELECT * FROM products ORDER BY $sort ASC";
+				}elseif (empty($_POST['category']) and !empty($_POST['userSearch']) and empty($_POST['sort'])) {
+					$search = $_POST['userSearch'];
+					$query = "SELECT * FROM products WHERE ProductName LIKE '$search%'";
+					//-------------------
+				}elseif (!empty($_POST['category']) and !empty($_POST['userSearch']) and empty($_POST['sort'])) {
+					$search = $_POST['userSearch'];
+					$category = $_POST['category'];
+					if ($category == "all") {
+						$query = "SELECT * FROM products WHERE ProductName LIKE '$search%'";
+					} else $query = "SELECT * FROM products WHERE ProductName LIKE '$search%' AND category = '$category'";
+				}elseif (empty($_POST['category']) and !empty($_POST['userSearch']) and !empty($_POST['sort'])) {
+					$search = $_POST['userSearch'];
+					$sort = $_POST['sort'];
+					$query = "SELECT * FROM products WHERE ProductName LIKE '$search%' ORDER BY $sort ASC";
+				}else

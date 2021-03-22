@@ -1,0 +1,60 @@
+body{
+	width: 80%;
+	margin: auto auto;
+	text-align: center;
+}
+
+h1,h3{
+	font-size: 40px;
+}
+
+form{
+	
+	margin:20px auto; 
+	padding:40px; 
+	background:rgba(239, 150, 81, 0.7);
+	font-size: 20px;
+}
+
+label{
+	margin-left: 40px;
+}
+
+label[for = sortByName],label[for = sortByPrice]{
+	margin-left: 0px;
+}
+
+input[type = 'checkBox']{
+	margin-left: 30px;
+}
+
+.logoutButton{
+	background-color: transparent;
+}
+
+input[type = 'submit']{
+	background:#ff9035; 
+	color:white; 
+	padding:10px 20px; 
+	border:solid 1px #ff9035; 
+	border-radius:5px;
+}
+
+
+.searchButton{
+	margin-left: 20px;
+}
+
+table{
+	width:60%;
+	float: center;
+}
+
+td{
+	margin: auto auto;
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+
