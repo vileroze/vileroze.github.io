@@ -1,0 +1,64 @@
+body{
+	background-image: linear-gradient(#de6262, #ffb88c);
+
+}
+
+.main{
+	width: 60%;
+	margin: auto auto;
+	background-image: linear-gradient(140deg, #eecda3, #ef629f);
+    border-radius: 40px;
+    padding: 30px 30px;
+}
+
+form{
+	margin:20px;
+	padding:40px;
+	background:transparent;
+	font-size: 20px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	margin-right: 30px;
+	border: 1px solid black;
+	padding: 10px 20px;
+	border-radius: 30px;
+}
+
+a:hover {
+    color: white;
+    box-shadow: inset 0px 33px 25px 0 #ff9966,
+                inset 0 66px 15px 0px #ff5e62;
+    border-radius: 20px;
+}
+
+button, input[type = 'submit'], input[type = 'reset']{
+	background:green;
+	color:white;
+	padding:10px 20px;
+	border:solid 1px green;
+	border-radius:5px;
+}
+
+
+label {
+    width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:40px;
+}
+
+.eMail{
+	margin-left: 20px;
+}
+
+input[type = 'radio']{
+	margin-left: 25px;
+}
+
+input[type = 'checkbox']{
+	margin-left: 15px;
+}
+
