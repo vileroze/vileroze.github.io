@@ -1,8 +1,4 @@
 <?php
-	//Make connection to database
-	include './mysql/Connection.php'; 
-
-	//---------------------------------------------------------
 
 	//Display heading
 	echo '<h2>Select ALL from the Customer Table</h2>';

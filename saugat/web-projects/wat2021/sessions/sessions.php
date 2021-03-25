@@ -8,6 +8,7 @@
 
     <div class="main">
     <h1>Login</h1>
+    <h3>try username: smthapa | password: smth01</h3>
     <?php
         include 'init.php';
 
@@ -19,7 +20,6 @@
             echo $_SESSION['error'];
         } else{
             include 'loginform.php';
-            //echo "no one has logged in";
             $_SESSION['error'] =  "no one has logged in";
             echo $_SESSION['error'];
         }

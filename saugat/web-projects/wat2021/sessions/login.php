@@ -24,7 +24,7 @@ if ($row = mysqli_fetch_assoc($userInfo)) {
     header ('location: http://localhost/wat2021/sessions/sessions.php');
 } else {
     $_SESSION['error']= 'User not recognised';
-    header ('location: http://localhost/wat2021/sessions/sessions.php', $_SESSION['error']);
+    header ('location: http://localhost/wat2021/sessions/sessions.php');
 }
 
 
