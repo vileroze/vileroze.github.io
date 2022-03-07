@@ -116,18 +116,18 @@ body
 
 .colour-change
 {
-	animation: multi-colour 1s infinite;
+	animation: multi-colour 2s infinite;
 }
 
 @keyframes multi-colour
 {
-	0%{color: pink;
+	0%{color: rgb(248, 61, 92);
 	}
 
 	25%{color: white;
 	}
 
-	50%{color: pink;
+	50%{color: rgb(248, 61, 92);
 	}
 
 	100%{color: white;
