@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+h1,h2,h3,h4,h5{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+.navbar .container .navbar-toggler{
+    background-color: black;
+}   
+
+.navbar .container .navbar-toggler .navbar-toggler-icon{
+    color: white!important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+} 
+
+
+.nav-link{
+    color: black!important;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: white!important;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.intro{
+    color: white;
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                      url('https://circaworks.com/wp-content/uploads/2020/12/what-makes-a-good-team.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.intro .row .left{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: #1b2f45;
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+.intro .row .left h1{
+    font-size: 4rem;
+}
+
+.vowel{
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+}
+
+#vowel-result{
+    color: white!important;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .navbar{
+        background-color: rgba(255,255,255, 0.5);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .vowel h1{
+        color: black!important;
+    }
+
+    #vowel-result{
+        color: black!important;
+    }
+}
