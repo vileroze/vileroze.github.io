@@ -28,7 +28,7 @@ function validate(){
                     err_msg.innerHTML = "Form ready for submission!!";
                 } catch (error) {
                     document.getElementById("sbt-btn").classList.add("disabled");
-                    err_msg.innerHTML = err_prefix + "Try adding https:// or http:// in the begining !!";
+                    err_msg.innerHTML = err_prefix + "Try adding https:// or http:// in the begining of your website !!";
                 }
             }else{
                 document.getElementById("sbt-btn").classList.add("disabled");
