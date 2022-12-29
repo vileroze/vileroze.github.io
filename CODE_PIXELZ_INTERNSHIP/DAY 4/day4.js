@@ -109,7 +109,9 @@ function billCalc(){
         }
     }
 
+    let total = (units*ppu)+service_charge;
     //display result
-    let result = "Your total bill is: " + units + "units X Rs." + ppu + " + Rs."+ service_charge +" (service charge)" +" = Rs." + (units*ppu)+service_charge;
+    let result = "Your total bill is: " + units + "units X Rs." + ppu + " + Rs."+ service_charge +
+                " (service charge)" +" = Rs." + total;
     document.getElementById("bill-result").innerHTML = result;
 }

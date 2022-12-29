@@ -74,26 +74,31 @@
 
     <script>
         const u_pos = document.getElementById("user-pos");
+        const api_key = 'f4fb0b7b46d9c50ebe1d9ea2687d01ba';
 
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
+                navigator.geolocation.getCurrentPosition(position =>{
+                  let user_long = position.coords.longitude;
+                  let user_lat = position.coords.latitude;
+
+                  u_pos.innerHTML = "Latitude: " + user_long + "<br>Longitude: " + user_lat;
+                  
+                  const base = `https://api.openweathermap.org/data/2.5/weather?lat=${user_lat}&lon=${user_long}&appid=${api_key}&units=metric`;
+                  
+                  
+                  fetch(base)
+                    .then((response) => {
+                    return response.json();
+                  }).then((data)=>{
+                    const {country, sunrise, sunset} = data.sys;
+                    const temp = {  }
+                  })
+                });
             } else {
-                u_pos.innerHTML = "Geolocation is not supported by this browser.";
+                u_pos.innerHTML = "Unable to get user location";
             }
         }
-
-        function showPosition(position) {
-            u_pos.innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
-        }
-
-        // const api_url = "https://api.openweathermap.org/data/2.5/weather?lat=33.33&lon=99.99&appid=f4fb0b7b46d9c50ebe1d9ea2687d01ba";
-        // async function getWeather(){
-        //     const response = await fetch(api_url);
-        //     const data = await response.json();
-        //     console.log(data.results);
-        // }
     </script>
   </body>
 </html>
