@@ -20,26 +20,28 @@
                 <!-- <form name="f_validate"> -->
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="f_name" aria-describedby="name">
+                        <input type="text" class="form-control" id="name" name="f_name" aria-describedby="name" oninput="validate()">
                     </div>
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" name="f_email" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="email" name="f_email" aria-describedby="emailHelp" oninput="validate()">
                     </div>
                     
                     <div class="mb-3">
                         <label for="phone" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="phone" name="f_phone">
+                        <input type="number" class="form-control" id="phone" name="f_phone" oninput="validate()">
                     </div>
 
                     <div class="mb-3">
                         <label for="website" class="form-label">Website</label>
-                        <input type="text" class="form-control" id="website" name="f_website" aria-describedby="website">
+                        <input type="text" class="form-control" id="website" name="f_website" aria-describedby="website" oninput="validate()">
                     </div>
-                    <button class="btn btn-primary" onclick="validate()">Validate</button>
+                    <!-- <button class="btn btn-primary" onclick="validate()">Validate</button> -->
                     <button type="submit" class="btn btn-success disabled" id="sbt-btn">Submit</button>
                 <!-- </form> -->
+
+                <h5 id="err_msg" class="text-danger"></h5>
             
             </div>
         </div>
