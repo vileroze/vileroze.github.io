@@ -9,6 +9,10 @@ function validate(){
     let err_prefix = "Error: ";
     let err_msg = document.getElementById("err_msg");
 
+    //default colors for errr_msg
+    document.getElementById("err_msg").classList.add("text-danger");
+    document.getElementById("err_msg").classList.remove("text-success");
+
     //check for empty entries
     if(u_name != "" || u_email != "" || u_phone != "" || u_website != ""){
         //validate email address usign regex
@@ -19,6 +23,9 @@ function validate(){
                 try {
                     let u_url = new URL(u_website);
                     document.getElementById("sbt-btn").classList.remove("disabled"); //button enabled
+                    document.getElementById("err_msg").classList.remove("text-danger");
+                    document.getElementById("err_msg").classList.add("text-success");
+                    err_msg.innerHTML = "Form ready for submission!!";
                 } catch (error) {
                     document.getElementById("sbt-btn").classList.add("disabled");
                     err_msg.innerHTML = err_prefix + "Try adding https:// or http:// in the begining !!";
