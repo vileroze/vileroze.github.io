@@ -15,16 +15,19 @@ function validate(){
 
     //check for empty entries
     if(u_name === "" || u_email === "" || u_phone === "" || u_website === ""){
+        document.getElementById("sbt-btn").classList.add("disabled");
         return alert("All fields must be filled !!");
     }
 
     //validate email address usign regex
     if(!u_email.match(email_regex)){
+        document.getElementById("sbt-btn").classList.add("disabled");
         return alert("Invalid email!!");
     }
 
     //validate phone number
     if(u_phone.length < 10 || u_phone.length > 10){
+        document.getElementById("sbt-btn").classList.add("disabled");
         return alert("Phone number should be of 10 digits!!");
     }
 
@@ -32,13 +35,13 @@ function validate(){
     try {
         let u_url = new URL(u_website);
     } catch (error) {
+        document.getElementById("sbt-btn").classList.add("disabled");
         return alert("Try adding https:// or http:// in the begining");
     }
 
-    alert("Form validated!!");
-
     //if all above condition passed
-    document.getElementById("sbt-btn").classList.remove("disabled");
+    alert("Form is ready to SUBMIT!!");
+    document.getElementById("sbt-btn").classList.remove("disabled"); //button enabled
 }
 
 
