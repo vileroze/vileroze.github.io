@@ -79,14 +79,17 @@
       function getLocation() {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(position =>{
+            //getting user coordinates
             let user_long = position.coords.longitude;
             let user_lat = position.coords.latitude;
-
+            
+            //display user position
             u_pos.innerHTML = "Latitude: " + user_long + "<br>Longitude: " + user_lat;
             
+            //api url
             const base = `https://api.openweathermap.org/data/2.5/weather?lat=${user_lat}&lon=${user_long}&appid=${api_key}&units=metric`;
             
-            
+            //fetching response (weather)
             fetch(base)
               .then((response) => {
               return response.json();
