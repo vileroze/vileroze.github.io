@@ -1,5 +1,31 @@
 //function that returns the number of values in string
 
+function validate(){
+    let err = "You can only enter positive whole numbers";
+    let err_msg = document.getElementById("err_msg");
+    let units = document.getElementById("units").value;
+    let submit_btn = document.getElementById("button-submit");
+    let string_regex = /[a-zA-Z]/g;
+    
+    let whole_number_regex = /^-?\d+$/;// 
+    
+    //setting the error message
+    err_msg.innerHTML = err;
+    
+    //disabling the submit button at the start
+    submit_btn.classList.add("disabled");
+      
+    if(!string_regex.test(units)){
+        if(whole_number_regex.test(units)){
+            if(units > 0){
+                submit_btn.classList.remove("disabled");
+                err_msg.innerHTML = "";
+            }
+        }
+    } 
+}
+
+
 function billCalc(){
 
     //get units

@@ -18,18 +18,20 @@
             <img src="electric-tarif.jpg">
           </div>
           
-          <h1>Bill Calculator</h1>
+          <h1>Bill Calculator:</h1>
 
           <label for="sel1" class="form-label">Select your power plan (in Amperes)</label>
-          <select class="form-select mb-5" id="power" name="sellist1">
+          <select class="form-select mb-2" id="power" name="sellist1">
             <option>5</option>
             <option>15</option>
             <option>30</option>
             <option>60</option>
           </select>
 
-          <input type="number" id="units" placeholder="Enter your units: " class="form-control mb-5" aria-label="user input" aria-describedby="button-submit" min="0" step="1" oninput="validity.valid||(value='');">
-          <button class="btn btn-success" type="button" id="button-submit" onclick="billCalc()">SUBMIT</button>
+          <!-- <input type="number" id="units" placeholder="Enter your units: " class="form-control mb-5" aria-label="user input" aria-describedby="button-submit" min="0" step="1" oninput="validity.valid||(value='');"> -->
+          <input type="text" id="units" placeholder="Enter your units: " class="form-control" aria-label="user input" aria-describedby="button-submit" oninput="validate()">
+          <p id="err_msg" class="text-danger mb-2"></p>
+          <button class="btn btn-success disabled" type="button" id="button-submit" onclick="billCalc()">SUBMIT</button>
           
           <p id="bill-result"></p>
           
