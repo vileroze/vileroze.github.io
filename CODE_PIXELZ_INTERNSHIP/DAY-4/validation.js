@@ -1,9 +1,3 @@
-// Name
-// Email (Validate email address)
-// Phone (should be 10 numbers only)
-// Website (Validate URL)
-
-
 
 let email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -17,7 +11,6 @@ function validate(){
 
     //check for empty entries
     if(u_name != "" || u_email != "" || u_phone != "" || u_website != ""){
-
         //validate email address usign regex
         if(u_email.match(email_regex)){
             //validate phone number
@@ -43,16 +36,6 @@ function validate(){
         document.getElementById("sbt-btn").classList.add("disabled");
         err_msg.innerHTML = err_prefix + "All fields must be filled !!";
     }
-
-    
-
-    
-
-    
-
-    // //if all above condition passed
-    // alert("Form is ready to SUBMIT!!");
-    // document.getElementById("sbt-btn").classList.remove("disabled"); //button enabled
 }
 
 
