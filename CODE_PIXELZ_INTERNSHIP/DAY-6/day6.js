@@ -22,7 +22,7 @@ function vowelCount(){
     var curr_date = document.getElementById("curr_date").value;
 
     //check if element is empty
-    if(input_str===null || input_str==="") return alert("First enter a string !!");
+    if(input_str===null || input_str==="" || u_name==="" || curr_date==="") return alert("All fields must be filled !!");
 
     //calculate number of vowels
     var result = "Result::: ";
