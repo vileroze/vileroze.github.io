@@ -34,14 +34,23 @@ function billCalc(){
     //---
     let curr_total = 0;
     let units_remaining = units;
-    let display_result = "";
-    let unit_ranges = [20,10,20,100,100,150];
 
     //check if units empty
     if(units===null || units==="") return alert("Units cannot be empty !!");
 
     //calculate price per unit and service charge 
     if(power == 5){
+        let service_charge_arr = [30, 50, 75, 100, 125, 150, 150];
+        let ppu_arr = [3, 7, 8.5, 10, 11, 12, 12];
+        let unit_ranges = [20,10,20,100,100,150,0];
+
+        let i = 0;
+        while (units_remaining > 0){
+
+            index++;
+        }
+
+
         if(units_remaining > 0){
             service_charge = 30;
             ppu = 3;
@@ -77,7 +86,6 @@ function billCalc(){
                     }else{
                         curr_total += units_remaining * ppu;
                     }
-                    ///////
 
                     if(units_remaining > 0 ){
                         service_charge = 100;
