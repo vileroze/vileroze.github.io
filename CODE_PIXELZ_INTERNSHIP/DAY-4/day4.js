@@ -66,10 +66,10 @@ function billCalc(){
         };
     }
 
-    
+
     //adding service charge
-    result_prefix += service_charge;
+    result_prefix += service_charge+"(service charge)";
     let total = curr_total + service_charge;
 
-    document.getElementById("bill-result").innerHTML = result_prefix + " = Rs." + total;
+    document.getElementById("bill-result").innerHTML = "Your total charge is:   "+ result_prefix + " = Rs." + total;
 }
