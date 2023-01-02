@@ -64,6 +64,75 @@ function billCalc(){
             }
             index++;
         };
+    }else if(power == 15){
+        //calculate price per unit and service charge 
+        let service_charge_arr = [50, 75, 100, 125, 150, 175, 200];
+        let ppu_arr = [4, 7, 8.5, 10, 11, 12, 13];
+        let unit_ranges = [20,10,20,100,100,150,0];
+        
+        let index = 0;
+        while(units_remaining > 0){
+            service_charge = service_charge_arr[index];
+            ppu = ppu_arr[index];
+
+            //calculating remainig units and current total 
+            if(units_remaining - unit_ranges[index] > 0){
+                curr_total +=  unit_ranges[index] * ppu;
+                units_remaining -= unit_ranges[index];
+                result_prefix += unit_ranges[index]+"*"+ppu+" + ";
+            }else{
+                curr_total += units_remaining * ppu;
+                result_prefix += units_remaining+"*"+ppu+" + ";
+                units_remaining = 0;
+            }
+            index++;
+        };
+    }else if(power == 30){
+        //calculate price per unit and service charge 
+        let service_charge_arr = [75, 100, 125, 150, 175, 200, 225];
+        let ppu_arr = [5, 7, 8.5, 10, 11, 12, 13];
+        let unit_ranges = [20,10,20,100,100,150,0];
+        
+        let index = 0;
+        while(units_remaining > 0){
+            service_charge = service_charge_arr[index];
+            ppu = ppu_arr[index];
+
+            //calculating remainig units and current total 
+            if(units_remaining - unit_ranges[index] > 0){
+                curr_total +=  unit_ranges[index] * ppu;
+                units_remaining -= unit_ranges[index];
+                result_prefix += unit_ranges[index]+"*"+ppu+" + ";
+            }else{
+                curr_total += units_remaining * ppu;
+                result_prefix += units_remaining+"*"+ppu+" + ";
+                units_remaining = 0;
+            }
+            index++;
+        };
+    }else if(power == 60){
+        //calculate price per unit and service charge 
+        let service_charge_arr = [125, 150, 175, 200, 225, 350, 275];
+        let ppu_arr = [6, 7, 8.5, 10, 11, 12, 13];
+        let unit_ranges = [20,10,20,100,100,150,0];
+        
+        let index = 0;
+        while(units_remaining > 0){
+            service_charge = service_charge_arr[index];
+            ppu = ppu_arr[index];
+
+            //calculating remainig units and current total 
+            if(units_remaining - unit_ranges[index] > 0){
+                curr_total +=  unit_ranges[index] * ppu;
+                units_remaining -= unit_ranges[index];
+                result_prefix += unit_ranges[index]+"*"+ppu+" + ";
+            }else{
+                curr_total += units_remaining * ppu;
+                result_prefix += units_remaining+"*"+ppu+" + ";
+                units_remaining = 0;
+            }
+            index++;
+        };
     }
 
 
