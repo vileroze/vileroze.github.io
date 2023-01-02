@@ -41,14 +41,10 @@
 
             <button class="btn btn-success disabled" type="button" id="button-submit" onclick="billCalc()">SUBMIT</button>
 
-            
           </form>
           
           <!-- displays any errors found -->
           <p id="bill-result"></p>
-
-          
-          
         </div>
       </div>
     </div>

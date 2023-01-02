@@ -1,11 +1,8 @@
-console.log("start");
 
 //displays modal after 5seconds using ".show()" as demonstrated in bootstrap docs.
 window.setTimeout(function () { //set timeout to 5 seconds
     //getting a new instance of modal
     var myModal = new bootstrap.Modal(document.getElementById('myModal'));
-
-    
 
     //triggering the ".show()" event
     myModal.show();

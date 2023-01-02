@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5{
 
 
 .nav-link{
-    color: black!important;
+    color: black;
     font-weight: bold;
 }
 
@@ -30,6 +30,11 @@ h1,h2,h3,h4,h5{
     font-weight: bolder;
     text-decoration: underline;
 }
+
+/* .nav-item:visited{
+    color: blue!important;
+    background-color: red!important;
+} */
 
 .intro{
     color: white;
