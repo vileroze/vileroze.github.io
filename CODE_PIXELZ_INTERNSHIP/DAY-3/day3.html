@@ -84,43 +84,55 @@
         </div>
     </div>
 
-
-
-
-    <h1>Weather app using API</h1>
-    Enter your city:<input type="text" placeholder="enter the name of your city" id="city">
-    <button onclick="getWeather()" class="dropbtn">Get current weather</button>
-    <h3 class="weather-result"></h3>
-
-
-
+    
+    <button onclick="getLocation()" class="dropbtn">Get current weather</button>
+    <h3 id="user-pos"></h3>
+    <h3 id="weather-result"></h3>
 
     <script>
-        function myFunction(){
-            document.querySelector("#myDropdown").classList.toggle("show");
-        }
+      function myFunction(){
+          document.querySelector("#myDropdown").classList.toggle("show");
+      }
 
-        function filterFn(){
-            let input = document.getElementById("myInput").value.toUpperCase();
-            let a_tag = document.getElementsByTagName("a");
+      function filterFn(){
+          let input = document.getElementById("myInput").value.toUpperCase();
+          let a_tag = document.getElementsByTagName("a");
 
-            for(let i=0; i<a_tag.length;i++){
-                let txt = a_tag[i].innerHTML;
-                if(txt.toUpperCase().indexOf(input) > -1){
-                    a_tag[i].style.display = "";
-                } else {
-                    a_tag[i].style.display = "none";
-                }
-            }
-        }
+          for(let i=0; i<a_tag.length;i++){
+              let txt = a_tag[i].innerHTML;
+              if(txt.toUpperCase().indexOf(input) > -1){
+                  a_tag[i].style.display = "";
+              } else {
+                  a_tag[i].style.display = "none";
+              }
+          }
+      }
 
-        ///////////////////////////////
-        const api_url = "https://api.openweathermap.org/data/2.5/weather?lat=33.33&lon=99.99&appid=f4fb0b7b46d9c50ebe1d9ea2687d01ba";
-        async function getWeather(){
-            const response = await fetch(api_url);
-            const data = await response.json();
-            console.log(data.results);
+      const u_pos = document.getElementById("user-pos");
+      const api_key = 'f4fb0b7b46d9c50ebe1d9ea2687d01ba';
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(position =>{
+            let user_long = position.coords.longitude;
+            let user_lat = position.coords.latitude;
+
+            u_pos.innerHTML = "Latitude: " + user_long + "<br>Longitude: " + user_lat;
+
+            const base = `https://api.openweathermap.org/data/2.5/weather?lat=${user_lat}&lon=${user_long}&appid=${api_key}&units=metric`;
+
+            fetch(base)
+              .then((response) => {
+              return response.json();
+            }).then((data)=>{
+              const desc = data.weather[0].description;
+              u_pos.innerHTML += `<br>Weather: ${desc}`;
+            })
+          });
+        } else {
+          u_pos.innerHTML = "Unable to get user location";
         }
+      }
     </script>
   </body>
 </html>
