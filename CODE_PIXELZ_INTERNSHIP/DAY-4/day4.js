@@ -73,7 +73,7 @@ function billCalc(){
         //calculate price per unit and service charge 
         let service_charge_arr = [50, 75, 100, 125, 150, 175, 200];
         let ppu_arr = [4, 7, 8.5, 10, 11, 12, 13];
-        let unit_ranges = [20,10,20,100,100,150,0];
+        let unit_ranges = [20,10,20,100,100,150];
         
         let index = 0;
         while(units_remaining > 0){
@@ -101,7 +101,7 @@ function billCalc(){
         //calculate price per unit and service charge 
         let service_charge_arr = [75, 100, 125, 150, 175, 200, 225];
         let ppu_arr = [5, 7, 8.5, 10, 11, 12, 13];
-        let unit_ranges = [20,10,20,100,100,150,0];
+        let unit_ranges = [20,10,20,100,100,150];
         
         let index = 0;
         while(units_remaining > 0){
@@ -129,7 +129,7 @@ function billCalc(){
         //calculate price per unit and service charge 
         let service_charge_arr = [125, 150, 175, 200, 225, 350, 275];
         let ppu_arr = [6, 7, 8.5, 10, 11, 12, 13];
-        let unit_ranges = [20,10,20,100,100,150,0];
+        let unit_ranges = [20,10,20,100,100,150];
         
         let index = 0;
         while(units_remaining > 0){
