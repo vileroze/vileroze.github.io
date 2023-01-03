@@ -45,12 +45,17 @@ function billCalc(){
         //calculate price per unit and service charge 
         let service_charge_arr = [30, 50, 75, 100, 125, 150, 175];
         let ppu_arr = [3, 7, 8.5, 10, 11, 12, 13];
-        let unit_ranges = [20,10,20,100,100,150,0];
+        let unit_ranges = [20,10,20,100,100,150];
         
         let index = 0;
         while(units_remaining > 0){
             service_charge = service_charge_arr[index];
             ppu = ppu_arr[index];
+
+            //units remaining after 350 will be added to "unit_ranges"
+            if(index == 5){
+                unit_ranges.push(units_remaining);
+            }
 
             //calculating remainig units and current total 
             if(units_remaining - unit_ranges[index] > 0){
@@ -75,6 +80,11 @@ function billCalc(){
             service_charge = service_charge_arr[index];
             ppu = ppu_arr[index];
 
+            //units remaining after 350 will be added to "unit_ranges"
+            if(index == 5){
+                unit_ranges.push(units_remaining);
+            }
+
             //calculating remainig units and current total 
             if(units_remaining - unit_ranges[index] > 0){
                 curr_total +=  unit_ranges[index] * ppu;
@@ -98,6 +108,11 @@ function billCalc(){
             service_charge = service_charge_arr[index];
             ppu = ppu_arr[index];
 
+            //units remaining after 350 will be added to "unit_ranges"
+            if(index == 5){
+                unit_ranges.push(units_remaining);
+            }
+
             //calculating remainig units and current total 
             if(units_remaining - unit_ranges[index] > 0){
                 curr_total +=  unit_ranges[index] * ppu;
@@ -120,6 +135,11 @@ function billCalc(){
         while(units_remaining > 0){
             service_charge = service_charge_arr[index];
             ppu = ppu_arr[index];
+
+            //units remaining after 350 will be added to "unit_ranges"
+            if(index == 5){
+                unit_ranges.push(units_remaining);
+            }
 
             //calculating remainig units and current total 
             if(units_remaining - unit_ranges[index] > 0){
