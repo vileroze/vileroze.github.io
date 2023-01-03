@@ -1,0 +1,9 @@
+There would be two players playing alternately. One roll at a time.
+Keep adding their scores until 51.
+If their score is 49 before the next roll. They would need 2. To finish the game. If they score anything above 2, 
+the number that is more than 51 would be reduced.
+For example.
+I am on 49 and on the next roll I roll 5.
+My new total would be 49+5 = 54 which is 3 more than 51.
+So my new total instead would be 51-3 (number that was more) = 48
+The first one to score exact 51 would be the winner.
