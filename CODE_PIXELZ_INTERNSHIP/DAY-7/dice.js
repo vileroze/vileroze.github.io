@@ -1,5 +1,5 @@
 let count = 0;
-let target = 7;
+let target = 51;
 
 function roll_dice(){
     let score = 0;
