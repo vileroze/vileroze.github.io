@@ -29,9 +29,6 @@ function roll_dice(){
         let points_over = score - target;
         let temp_score = target - points_over;
         score_element.innerHTML = temp_score;
-
-        roll_dice();
-
     }else {
         //random number from 1 to 6
         dice = Math.floor(Math.random() * (6 - 1) + 1);
