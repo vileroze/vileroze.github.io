@@ -3,42 +3,44 @@
     if (isset($_POST['validate_customer'])) {
 
         //get form data
-        $user_name = $_POST['user_name'];
-        $user_password = $_POST['user_password'];
+        $house_no = $_POST['login_house_number'];
+        $user_password = $_POST['login_user_password'];
 
-        if(!empty($user_name) || !empty($user_password)){
+        if(!empty($house_no) && !empty($user_password)){
+
+
             //make connection
             include "../connection.php";
 
-            // Performing insert query execution
-            $sql = "SELECT * FROM bill WHERE customer_name = '$user_name'";
-            $result = mysqli_query($conn, $sql);
-            
-            if($result->num_rows > 0){
-                
+            //convert to md5 before checking | john -> 527bd5b5d689e2c32ae974c6229ff785
+            $user_password_md5 = md5($user_password);
+
+            //check if house number already present in db
+            $sql = "SELECT * FROM customer WHERE house_no = '$house_no' AND user_password = '$user_password_md5'";
+            $result = $conn->query($sql);
+
+            if($result->num_rows == 1){
                 session_start();
 
                 while($row = $result->fetch_assoc()) {
-                    $_SESSION['user_name'] = $user_name;
+                    $_SESSION['user_name'] = $row["customer_name"];
                     $_SESSION['house_no'] = $row["house_no"];
-                    $_SESSION['power_plan'] = $row["power_plan"];
-                    $_SESSION['power_usage'] = $row["power_usage"];
-                    $_SESSION['user_total'] = $row["user_total"];
                 }
-
+                echo "<p class='text-success'>Customer verified!!". $_SESSION['user_name']."||". $_SESSION['house_no']."</p>";
                 header("Location: ../bill-calculator.php");
-
-            } else{
-                echo "<p class='text-danger'>ERROR: There is no user with that name</p>";
+                
+            }else{
+                echo "<p class='text-danger'>ERROR: No user with the given details found</p>";
             }
 
             // close the result.
             mysqli_free_result($result);
-            
+                
             // Close connection
             mysqli_close($conn);
+
         }else{
-            echo "<p class='text-danger'>ERROR: All the fields must be filled</p>";
+            echo "<p class='text-danger'>ERROR: Enter your house number and password</p>";
         } 
     }
 

@@ -4,13 +4,15 @@
     //make connection
     include "../connection.php";
 
-    $u_name = $_SESSION['user_name'];
     $u_house_no = $_SESSION['house_no'];
 
-    // delete user quer
-    $sql = "DELETE FROM bill WHERE customer_name = '$u_name ' AND house_no = $u_house_no";
+    // delete user 
+    $sql1 = "DELETE FROM customer WHERE house_no = $u_house_no";
+
+    //delete all bill associated with user
+    $sql2 = "DELETE FROM bill WHERE house_no = $u_house_no";
     
-    if(mysqli_query($conn, $sql)){
+    if(mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2)){
 
         //clear session and send to login screen
         session_start();

@@ -28,13 +28,13 @@
             <img src="electric-tarif.jpg">
           </div>
           
-          <h1>Bill Calculator</h1>
+          <h4 class="text-decoration-underline">Bill Calculator</h4>
           <div class="d-flex bd-highlight">
             
             <!-- user greeting with basic info -->
             <div class="p-2 flex-grow-1 bd-highlight">
               <p class="text-muted"> 
-                <strong>Hello <?php echo $_SESSION['user_name'] ?></strong>, Pressing the SUBMIT button will update your information
+                <strong>Hello <?php echo $_SESSION['user_name'] ?></strong>, pressing the SUBMIT button will add a new record
               </p>
             </div>
 
@@ -69,12 +69,12 @@
 
             <!-- total units used -->
             <label for="units" class="form-label">Power Usage</label>
-            <input type="text" id="units" name="units" onfocusout="billCalc();" value="<?php echo isset($_POST['units']) ? $_POST['units'] : $_SESSION['power_usage'] ?>"  placeholder="Enter your units: " class="form-control" oninput="validate()">
+            <input type="text" id="units" name="units" onfocusout="billCalc();" value="<?php echo isset($_POST['units']) ? $_POST['units'] : '' ?>"  placeholder="Enter your units: " class="form-control" oninput="validate()">
             <p id="err_msg" class="text-danger mb-2"></p>
 
             <!-- displays bill total -->
             <label for="bill_total" class="form-label">Total</label>
-            <input type="text" name="bill_total" id="bill_total"  value="<?php echo isset($_POST['bill_total']) ? $_POST['bill_total'] : $_SESSION['user_total'] ?>" placeholder="Your total will appear here" class="form-control mb-2 border-success" readonly>
+            <input type="text" name="bill_total" id="bill_total"  value="<?php echo isset($_POST['bill_total']) ? $_POST['bill_total'] : '' ?>" placeholder="Your total will appear here" class="form-control mb-2 border-success" readonly>
             
             <!-- submit button -->
             <button class="btn btn-success disabled" type="submit" id="button-submit" name="bill-submit">SUBMIT</button>
@@ -84,7 +84,7 @@
           <script src="bill-calc.js"></script>
 
           <!-- action to be performed after form submission -->
-          <?php include "addEditUser.php"; ?>
+          <?php include "addBill.php"; ?>
 
         </div>
       </div>
@@ -93,10 +93,18 @@
     <div class="container">
       <div class="row">
         <div class="col mb-5">
-          <h5>ALL CUSTOMER DATA</h5>
+          <h4 class="text-decoration-underline mb-3">Bill History</h4>
+          <div class="input-group mb-3">
+            <form method="POST" >
+              <div class="input-group mb-3">
+                <input type="date" id="date_filter" name="date_filter" class="form-control" aria-label="bill to filter date" required>
+                <button class="btn btn-info" id="filter_bill" name="filter_bill">Filter</button>
+              </div>
+            </form>
+          </div>
           <?php 
-              include 'all_customers.php';
-            ?>
+            include 'customer_bills.php';
+          ?>
         </div>
       </div>
     </div>
