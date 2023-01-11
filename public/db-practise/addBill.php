@@ -9,18 +9,23 @@
         $house_number = $_POST['house_number'];
         $power = $_POST['power'];
         $units = $_POST['units'];
-        $total = $_POST['bill_total'];
+        $total_calc = $_POST['bill_total'];
+        $index = strpos($total_calc, "=");
+        $total_calc_sbstr = substr($total_calc, $index + strlen('='));
+        $total = str_replace("Rs.","", $total_calc_sbstr);
+
+        
         $curr_date = date("Y-m-d");
 
-        // update query
-        $sql = "INSERT INTO bill VALUES ($house_number, $power, $units, '$total', '$curr_date', 'yes' )";
+        // insert bill query
+        $sql = "INSERT INTO bill VALUES ($house_number, $power, $units, $total, '$total_calc', '$curr_date', 'yes' )";
 
         if(mysqli_query($conn, $sql)){
             echo "<h5 class='text-success mt-3'><strong>".$_SESSION['user_name']."</strong>, your bill has been added, please check your email for your receipt</h5>";
 
             $query = "SELECT user_email FROM customer WHERE house_no =  $house_number";
-            // mysqli_query($conn, $query);
             $result = $conn->query($query);
+            
             $to="";
 
             while($row = $result->fetch_assoc())
@@ -42,7 +47,7 @@
                             <body> 
                                 <p>Power volume: '.$power.'</p><br>
                                 <p>Total units consumed: '.$units.'</p><br>
-                                <p>'.$total.'</p><br>
+                                <p>'.$total_calc.'</p><br>
                             </body> 
                             </html>
                         '; 

@@ -23,7 +23,8 @@
                                 <th scope='col'>#</th>
                                 <th scope='col'>Power plan (ampere)</th>
                                 <th scope='col'>Power usage (units)</th>
-                                <th scope='col'>Total</th>
+                                <th scope='col'>Tota(Rs.)</th>
+                                <th scope='col'>Total Calc</th>
                                 <th scope='col'>Date</th>
                                 <th scope='col'>Paid</th>
                             </tr>
@@ -39,6 +40,7 @@
                                 echo "<td>".$row["power_plan"]."</td>";
                                 echo "<td>".$row["power_usage"]."</td>";
                                 echo "<td>".$row["user_total"]."</td>";
+                                echo "<td>".$row["user_total_calc"]."</td>";
                                 echo "<td>".$row["encurred_date"]."</td>";
                                 echo "<td>".$row["paid"]."</td>";
                             echo "</tr>";
