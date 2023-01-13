@@ -1,3 +1,10 @@
+// function submitBillForm(){
+//     document.getElementById("addNewBill").submit();
+// }
+
+let gross_total = 0;
+
+
 let u_name = document.getElementById("user_name").value;
 let house_no = document.getElementById("house_number").value;
 
@@ -7,6 +14,7 @@ function validate(){
     let err_msg = document.getElementById("err_msg");
     let units = document.getElementById("units").value;
     let submit_btn = document.getElementById("button-submit");
+    let pay_now_btn = document.getElementById("pay_now")
     let string_regex = /[a-zA-Z]/g;
     
     let whole_number_regex = /^-?\d+$/;// 
@@ -16,11 +24,13 @@ function validate(){
     
     //disabling the submit button at the start
     submit_btn.classList.add("disabled");
+    pay_now_btn.classList.add("disabled");
       
     if(!string_regex.test(units)){
         if(whole_number_regex.test(units)){
             if(units > 0){
                 submit_btn.classList.remove("disabled");
+                pay_now_btn.classList.remove("disabled");
                 err_msg.innerHTML = "";
             }
         }
@@ -29,6 +39,8 @@ function validate(){
 
 
 function billCalc(){
+    let payPalBtn = document.getElementById('paypal-button-container');
+    // payPalBtn.classList.add('d-none');
 
     //get units | ppu -> price per unit
     let units = document.getElementById("units").value;
@@ -163,7 +175,11 @@ function billCalc(){
     //adding service charge
     result_prefix += service_charge+"(service charge)";
     let total = curr_total + service_charge;
+    gross_total = total;
     
     //display result
     document.getElementById("bill_total").value = "Your total charge is:   "+ result_prefix + " = Rs." + total;
+
+    // payPalBtn.classList.add('d-block');
+    // payPalBtn.classList.remove('d-none');
 }

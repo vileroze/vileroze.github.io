@@ -16,6 +16,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- paypal script and merchant id -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AS8ofe598s_1Jh25t0Ec-EUiEp-XSen_YijtDs_0QeEFQaqv4uN2RjPP0Fno9oPnnoOD3wi9pvv3FXVI&merchant-id=AG5HE495MBY7N&locale=en_NP"></script>
+
     <title>DAY 10</title>
   </head>
   <body>
@@ -49,7 +52,7 @@
             </div>
           </div>
 
-          <form method="POST">
+          <form id="addNewBill" method="POST">
             <!-- customer name -->
             <label for="user_name" class="form-label">Name</label>
             <input readonly type="text" name="user_name" id="user_name" value="<?php echo isset($_POST['user_name']) ? $_POST['user_name'] : $_SESSION['user_name'] ?>"  placeholder="Enter your name " class="form-control mb-2">
@@ -77,7 +80,8 @@
             <input type="text" name="bill_total" id="bill_total"  value="<?php echo isset($_POST['bill_total']) ? $_POST['bill_total'] : '' ?>" placeholder="Your total will appear here" class="form-control mb-2 border-success" readonly>
             
             <!-- submit button -->
-            <button class="btn btn-success disabled" type="submit" id="button-submit" name="bill-submit">SUBMIT</button>
+            <button class="btn btn-success w-25 disabled mt-3" type="submit" id="button-submit" name="bill-submit">PAY LATER</button>
+          
           </form>
 
           <!-- Custom script -->
@@ -85,6 +89,62 @@
 
           <!-- action to be performed after form submission -->
           <?php include "addBill.php"; ?>
+
+          <!--Modal -->
+          <button class="btn btn-success w-25 mt-3 disabled" id="pay_now" data-bs-toggle="modal" data-bs-target="#staticBackdrop">PAY NOW</button>
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Choose a payment option</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div id="paypal-button-container" ></div>
+                  <script>
+                    paypal.Buttons({
+                      style: {
+                        layout: 'vertical',
+                        color:  'gold',
+                        shape:  'rect',
+                        label:  'paypal'
+                      },
+                      // Sets up the transaction when a payment button is clicked
+                      createOrder: function(data, actions) {
+                        return actions.order.create({
+                          purchase_units: [{
+                            amount: {
+                              value: gross_total// Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                            }
+                          }]
+                        });
+                      },
+
+                      // Finalize the transaction after payer approval
+                      onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(orderData) {
+                          // When ready to go live, remove the alert and show a success message within this page. For example:
+                          var paypalBtn = document.getElementById('paypal-button-container');
+                          let submit_btn = document.getElementById("button-submit");
+                          
+                          //display message
+                          paypalBtn.innerHTML = '';
+                          paypalBtn.innerHTML = '<h3 class="text-success">Thank you for your payment!</h3>';
+                          
+                          //click the submit button
+                          submit_btn.click();
+                          //disable submit button
+                          submit_btn.classList.add('disabled');
+                          <?php //insertNewBill(); ?>
+                          // Or go to another URL:  actions.redirect('thank_you.html');
+                        });
+                      }
+                    }).render('#paypal-button-container');
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
