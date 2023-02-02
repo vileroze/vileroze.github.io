@@ -1,8 +1,0 @@
-Using Switch case, write a program that shows the dates of this month in a table.
-depending on what the day is, the background of each cell should be:
-Monday: Green
-Tuesday: Pink
-Wednesday: Blue
-Thursday: Yellow
-Friday: Purple
-Saturday and Sunday: Red
