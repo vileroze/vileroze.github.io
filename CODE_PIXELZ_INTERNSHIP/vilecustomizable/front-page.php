@@ -26,6 +26,12 @@
 	$testimonialTitle = nl2br(!empty(get_theme_mod('set_testimonial_title')) ? __(wp_kses(get_theme_mod('set_testimonial_title'), 'strip'), 'vile') : '"An intuitive solution to a common problem that we all face, wrapped up in a single app!"');
 	$testimonialImg =  !empty(get_theme_mod('set_testimonial_by')) ? get_theme_mod('set_testimonial_by') : "/wp-content/themes/vilecustomizable/assets/images/tnw-logo.svg";
 
+	//information section
+	$infoSecImgPos = !empty(get_theme_mod('set_info_img_pos')) ? get_theme_mod('set_info_img_pos') : "2";
+	$infoSecTitle = !empty(get_theme_mod('set_info_title')) ? __(get_theme_mod('set_info_title'), 'vile') : "Enter a new age of web design";
+	$infoSecDesc = nl2br(!empty(get_theme_mod('set_info_desc')) ? __(get_theme_mod('set_info_desc'), 'vile') : "This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else!");
+	$infoSecImg = !empty(get_theme_mod('set_info_sec_img')) ? get_theme_mod('set_info_sec_img') : "/wp-content/themes/vilecustomizable/assets/images/app-info-img.jpeg";
+
 	//desktop download section
 	$desktopDwnTitle = nl2br(!empty(get_theme_mod('set_desktop_dwnld_title')) ? __(get_theme_mod('set_desktop_dwnld_title'), 'vile') : "Stop waiting. Start building.");
 	$desktopDwnBtnTitlePos = '';
@@ -46,6 +52,7 @@
 
 	//quick download links section
 	$quickDwnldLinkTitle = nl2br(!empty(get_theme_mod('set_quick_dwnld_links')) ? __(wp_kses(get_theme_mod('set_quick_dwnld_links'), 'strip'), 'vile') : 'Get the app now!');
+	
 	$dwnldLinkOpenStyle = get_theme_mod('set_dwnld_link_target') == 0 ? "_self" : "_blank";
 
 
@@ -59,7 +66,7 @@
 						<!-- Mashead text and app badges-->
 						<div class="mb-5 mb-lg-0 text-center text-lg-start">
 							
-							<h1 class="main-title display-1 lh-1 mb-3"><?php echo $mainSecTitle; ?></h1> 
+							<h1 class="main-title display-1 lh-1 mb-3"><?php echo $mainSecTitle ?></h1> 
 
 							<p class="main-desc lead fw-normal text-muted mb-5"><?php echo $mainSecDesc; ?></p>
 
@@ -136,50 +143,44 @@
 			</div>
 
 			<?php
-				$customizer_repeater_testimonial = get_theme_mod('customizer_repeater_testimonial');
-				$customizer_repeater_testimonial_decoded = json_decode($customizer_repeater_testimonial);
-				if(!is_null($customizer_repeater_testimonial_decoded)){
-					foreach($customizer_repeater_testimonial_decoded as $repeater_item){
-						echo '
-							<div class="row gx-5 justify-content-center bg-gradient-primary-to-secondary mt-5 py-5">
-								<div class="col-xl-8">
-									<div class="h2 fs-1 text-white mb-4">'.$repeater_item->title.'</div>
-									<img  src="'.$repeater_item->image_url.'" alt="..." style="height: 3rem" />
-								</div>
+				$settings = get_theme_mod( 'testimonial_repeater_setting' );
+
+				foreach($settings as $setting){
+					
+					echo '
+						<div class="row gx-5 justify-content-center mt-5 py-5" style="background-color: '.$setting['testimonial_bg_color'].'">
+							<div class="col-xl-8">
+								<div class="h2 fs-1 text-white mb-4">'.$setting['testimonial_text'].'</div>
+								<img  src="'.$setting['testimonial_image'].'" alt="..." style="height: 3rem" />
 							</div>
-							';
-					}
+						</div>
+						';
 				}
+
 			?>
 		</div>
 	</aside>
 
 	<?php if (get_field("show_features_section") == "show") { ?>
-		<!-- App features section-->
+		<!-- features section-->
 		<section id="features">
 			<div class="container px-5">
 				<div class="row gx-5 align-items-center">
 					<div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
 						<div class="container-fluid px-5">
 							<div class="row gx-5 justify-content-center">
-								<div class="col-md-4">
-									<!-- Feature item-->
-									<div class="text-center">
-										<i class="bi-<?php echo get_field("feature_1_logo") ?> icon-feature text-gradient d-block mb-3"></i>
-										<h3 class="font-alt"><?php echo get_post_meta($currPageId, "feature_1", true); ?></h3>
-										<p class="text-muted mb-0"><?php echo get_post_meta($currPageId, "feature_1_description", true); ?></p>
-									</div>
-								</div>
+								
 
 								<?php
+
 									$customizer_repeater_feature = get_theme_mod('customizer_repeater_feature');
 									$customizer_repeater_feature_decoded = json_decode($customizer_repeater_feature);
 									if(!is_null($customizer_repeater_feature_decoded)){
 										foreach($customizer_repeater_feature_decoded as $repeater_item){
 											echo '
-												<div class="col-md-4 mb-5">
+												<div class="col-md-6 mb-5">
 													<div class="text-center">
-														<img class="mb-4 rounded-circle" src="'.$repeater_item->image_url.'" style="height: 5.5rem!important" />
+														<img class="mb-4 rounded-circle" src="'.$repeater_item->image_url.'" style="width: 4rem" />
 														<h3 class="font-alt">'.$repeater_item->title.'</h3>
 														<p class="text-muted mb-0">'.$repeater_item->subtitle.'</p>
 													</div>
@@ -187,7 +188,7 @@
 												';
 										}
 									}
-									
+
 								?>
 							</div>
 						</div>
@@ -237,35 +238,37 @@
 		<section class="bg-light">
 			<div class="container px-5">
 				<div class="row gx-5 align-items-center justify-content-center justify-content-lg-between ">
-					<div class="col-12 col-lg-5 order-<?php echo (get_theme_mod('set_info_img_pos') != "" ? get_theme_mod('set_info_img_pos') : "2") ?>">
-						<h2 class="display-4 lh-1 mb-4"><?php echo get_theme_mod('set_info_title'); ?></h2>
-						<p class="lead fw-normal text-muted mb-5 mb-lg-0"><?php echo get_theme_mod('set_info_desc'); ?></p>
+					<div class="col-12 col-lg-5 order-<?php echo $infoSecImgPos; ?>">
+						<h2 class="display-4 lh-1 mb-4"><?php echo $infoSecTitle; ?></h2>
+						<p class="lead fw-normal text-muted mb-5 mb-lg-0"><?php echo $infoSecDesc; ?></p>
 					</div>
 					<div class="col-sm-8 col-md-6 order-3">
-						<div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="<?php echo get_theme_mod('set_info_sec_img'); ?>" alt="..." /></div>
+						<div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="<?php echo $infoSecImg; ?>" alt="..." /></div>
 					</div>
 				</div>
 
-				<h1 class="text-center my-5 py-5 text-decoration-underline">New Features</h1>
+				<h1 class="text-center my-5 py-5 text-decoration-underline">Added Features</h1>
 
 				<?php
-					$customizer_repeater_information = get_theme_mod('customizer_repeater_example');
-					$customizer_repeater_information_decoded = json_decode($customizer_repeater_information);
 
-					if(!is_null($customizer_repeater_information_decoded)){
-						foreach($customizer_repeater_information_decoded as $repeater_item){
-							echo '
-								<div class="row gx-5 justify-content-center justify-content-lg-between mb-5 pb-5">
-									<div class="col-12 col-lg-5 order-2">
-										<h2 class="display-4 lh-1 mb-4">'.$repeater_item->title.'</h2>
-										<p class="lead fw-normal text-muted mb-5 mb-lg-0">'.$repeater_item->subtitle.'</p>
-									</div>
-									<div class="col-sm-8 col-md-6 order-3">
-										<div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="'.$repeater_item->image_url.'" alt="..." /></div>
-									</div>
+
+					$settings = get_theme_mod( 'information_repeater_setting' );
+					
+					foreach($settings as $setting){
+
+						$img_pos = $setting['information_image_pos'] == false ? '2' : '4';
+						
+						echo '
+							<div class="row gx-5 align-items-center justify-content-center justify-content-lg-between mt-5">
+								<div class="col-12 col-lg-5 order-'.$img_pos.'">
+									<h2 class="display-4 lh-1 mb-4">'.$setting['information_title'].'</h2>
+									<p class="lead fw-normal text-muted mb-5 mb-lg-0">'.$setting['information_desc'].'</p>
 								</div>
-								';
-						}
+								<div class="col-sm-8 col-md-6 order-3">
+									<div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="'.$setting['information_image'].'" alt="..." /></div>
+								</div>
+							</div>
+							';
 					}
 				?>
 			</div>
@@ -300,7 +303,11 @@
 					$customizer_repeater_download_links_decoded = json_decode($customizer_repeater_download_links);
 					if(!is_null($customizer_repeater_download_links_decoded)){
 						foreach($customizer_repeater_download_links_decoded as $repeater_item){
-							echo '<a class="ms-2" href="'.$repeater_item->title.'" target="'.$dwnldLinkOpenStyle.'"><img class="app-badge" src="'.$repeater_item->image_url.'" alt="..." /></a>';
+							echo '
+								<a class="ms-2" href="'.$repeater_item->title.'" target="'.$dwnldLinkOpenStyle.'">
+									<img class="app-badge" src="'.$repeater_item->image_url.'" alt="..." />
+								</a>
+								';
 						}
 					}
 				?>
@@ -317,14 +324,8 @@
 					<button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body border-0 p-4">
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- * * SB Forms Contact Form * *-->
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- This form is pre-integrated with SB Forms.-->
-					<!-- To make this form functional, sign up at-->
-					<!-- https://startbootstrap.com/solution/contact-forms-->
 					<!-- to get an API token!-->
-					<form id="contactForm" data-sb-form-api-token="API_TOKEN">
+					<form id="contactForm" data-sb-form-api-token="2459187c-1f40-402d-a772-0ce2c8bb3de3">
 						<!-- Name input-->
 						<div class="form-floating mb-3">
 							<input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />

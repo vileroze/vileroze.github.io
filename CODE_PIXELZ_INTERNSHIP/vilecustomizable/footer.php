@@ -6,7 +6,7 @@
                         <?php echo get_theme_mod('set_copyright', '&copy; Your Website 20XX - All Rights Reserved') ?>
                     </div>
 
-                    <?php 
+                    <?php
                         wp_nav_menu(
                             array(
                                 'menu' => 'secondary',//name of the menu in the array created in functions.php

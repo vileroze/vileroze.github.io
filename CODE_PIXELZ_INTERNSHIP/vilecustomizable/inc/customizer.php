@@ -1,4 +1,45 @@
 <?php
+    //KIRKI CONFIGURATION
+    
+    // Kirki::add_config( 'vile_kirki_customizer', [ //Make sure to change the theme_config_id
+    //     'capability'    => 'edit_theme_options',
+    //     'option_type'   => 'theme_mod',
+    // ] );
+    
+    // add_filter( 'kirki_telemetry', '__return_false' );
+
+    // Kirki::add_field( 'theme_config_id', [
+    //     'type'        => 'color',
+    //     'settings'    => 'color_setting',
+    //     'label'       => __( 'Border', 'text-domain' ),
+    //     'description' => esc_html__( 'Some cool description', 'text-domain' ),
+    //     'section'     => 'section_id',
+    //     'default'     => '#0088CC',
+    //     'output'      => [
+    //         [
+    //             'element' => '.kirki-demo',
+    //             'property' => 'border-color',
+    //             'suffix' => '!important',
+    //         ],
+    //     ],
+    // ] );
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     //creating front page panel
     function frontpage_panel( \WP_Customize_Manager $wp_customize ){
@@ -418,32 +459,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * QUOTE / TESTIMONIAL SECTION
      */
@@ -499,50 +514,23 @@
         );
 
         //testimonial repeater
-        $wp_customize->add_setting( 'customizer_repeater_testimonial');
+        // $wp_customize->add_setting( 'customizer_repeater_testimonial');
 
-
-
-
-        
-        $wp_customize->add_control( 
-            new Customizer_Repeater( $wp_customize, 'customizer_repeater_testimonial', 
-                [
-                    'label'   => 'Add New feature',
-                    'section' => 'sec_testimonial',
-                    'customizer_repeater_title_control' => true,
-                    'customizer_repeater_image_control' => true,
-                    'customizer_repeater_icon_control' => true,
-                ] 
-            ) 
-        );
+        // $wp_customize->add_control( 
+        //     new Customizer_Repeater( $wp_customize, 'customizer_repeater_testimonial', 
+        //         [
+        //             'label'   => 'Add New feature',
+        //             'section' => 'sec_testimonial',
+        //             'customizer_repeater_title_control' => true,
+        //             'customizer_repeater_image_control' => true,
+        //             'customizer_repeater_icon_control' => true,
+        //         ] 
+        //     ) 
+        // );
        
 
     }
     add_action('customize_register', 'testimonial_section');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -593,26 +581,6 @@
                 'description' => 'Displays information about app',
                 'panel' => 'panel_frontpage'
             ]
-        );
-
-        //info repeater
-        $wp_customize->add_setting( 'customizer_repeater_example');
-
-        $wp_customize->add_control( 
-            new Customizer_Repeater( $wp_customize, 'customizer_repeater_example', 
-                [
-                    'label'   => 'Add New Section',
-                    'section' => 'sec_info',
-                    'customizer_repeater_title_control' => true,
-                    'customizer_repeater_subtitle_control' => true,
-                    'customizer_repeater_image_control' => true,
-                    'customizer_repeater_icon_control' => true,
-                    // 'customizer_repeater_img_pos_control' => true,
-                    // 'customizer_repeater_custom_title_control' => true,
-                    // 'customizer_repeater_text2_control' => true,
-
-                ] 
-            ) 
         );
 
 
